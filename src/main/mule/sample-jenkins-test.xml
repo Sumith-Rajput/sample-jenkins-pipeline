@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a0c47e3f-e106-4a51-943f-826176814541" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="sample-jenkins-testFlow" doc:id="7a1aa01e-7313-49dc-bfa4-a7ee48ac58ab" >
+		<http:listener doc:name="Listener" doc:id="83a5a271-4628-494a-8bef-5f5730dffeaf" config-ref="HTTP_Listener_config" path="/jenkins"/>
+		<logger level="INFO" doc:name="Logger" doc:id="7766382c-6839-4abe-8d30-b887f5ed715b" message="Flow Started"/>
+		<logger level="INFO" doc:name="Logger" doc:id="3d820525-c789-463f-8a45-21fc1d1fdd25" message="Flow Ended"/>
+	</flow>
+</mule>

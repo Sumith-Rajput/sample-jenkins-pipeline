@@ -1,0 +1,26 @@
+{
+  "configs": [
+    "demo_java_invoke.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:demo_java_invoke:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.3.0",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [
+        "demo_java_invoke"
+      ],
+      "exportedResources": [
+        "log4j2.xml",
+        "demo_java_invoke.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

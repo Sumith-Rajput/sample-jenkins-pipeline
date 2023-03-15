@@ -8,3 +8,4 @@ node('local-mac') {
                 echo 'Deploying....'
         }
 }
+}
